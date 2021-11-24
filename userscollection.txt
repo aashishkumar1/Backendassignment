@@ -1,0 +1,207 @@
+ show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+> use assignment
+switched to db assignment
+> db.createCollection('users')
+{ "ok" : 1 }
+> db.users.insert({"first_name":"Aashish","last_name":"Kumar","email":"ak@gmail.com","gender":"Male","ip_address":"12","age":"23"})
+WriteResult({ "nInserted" : 1 })
+> db.users.find({})
+{ "_id" : ObjectId("619e65e5779b7e102659d575"), "first_name" : "Aashish", "last_name" : "Kumar", "email" : "ak@gmail.com", "gender" : "Male", "ip_address" : "12", "age" : "23" }
+> db.users.insert({"first_name":"Deepak","last_name":"Yadav","email":"dy@gmail.com","gender":"Male","ip_address":"13","age":"24"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insertMany([{"first_name":"Deepak","last_name":"Yadav","email":"dy@gmail.com","gender":"Male","ip_address":"13","age":"24"},{"first_name":"Vijay","last_name":"Kadyan","email":"vk@gmail.com","gender":"Male","ip_address":"14","age":"24"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("619e6723779b7e102659d577"),
+                ObjectId("619e6723779b7e102659d578")
+        ]
+}
+> db.users.insertMany([{"first_name":"Deepak","last_name":"Yadav","email":"dy@gmail.com","gender":"Male","ip_address":"13","age":"24"},{"first_name":"Vijay","last_name":"Kadyan","email":"vk@gmail.com","gender":"Male","ip_address":"14","age":"24"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("619e672b779b7e102659d579"),
+                ObjectId("619e672b779b7e102659d57a")
+        ]
+}
+> db.users.insertMany([{"first_name":"Deepak","last_name":"Yadav","email":"dy@gmail.com","gender":"Male","ip_address":"13","age":"24"},{"first_name":"Vijay","last_name":"Kadyan","email":"vk@gmail.com","gender":"Male","ip_address":"14","age":"24"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("619e673a779b7e102659d57b"),
+                ObjectId("619e673a779b7e102659d57c")
+        ]
+}
+> db.users.insertMany([{"first_name":"Deepak","last_name":"Yadav","email":"dy@gmail.com","gender":"Male","ip_address":"13","age":"24"},{"first_name":"Vijay","last_name":"Kadyan","email":"vk@gmail.com","gender":"Male","ip_address":"14","age":"24"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("619e673c779b7e102659d57d"),
+                ObjectId("619e673c779b7e102659d57e")
+        ]
+}
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("619e65e5779b7e102659d575"),
+        "first_name" : "Aashish",
+        "last_name" : "Kumar",
+        "email" : "ak@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "12",
+        "age" : "23"
+}
+{
+        "_id" : ObjectId("619e6678779b7e102659d576"),
+        "first_name" : "Deepak",
+        "last_name" : "Yadav",
+        "email" : "dy@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "13",
+        "age" : "24"
+}
+{
+        "_id" : ObjectId("619e6723779b7e102659d577"),
+        "first_name" : "Deepak",
+        "last_name" : "Yadav",
+        "email" : "dy@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "13",
+        "age" : "24"
+}
+{
+        "_id" : ObjectId("619e6723779b7e102659d578"),
+        "first_name" : "Vijay",
+        "last_name" : "Kadyan",
+        "email" : "vk@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "14",
+        "age" : "24"
+}
+{
+        "_id" : ObjectId("619e672b779b7e102659d579"),
+        "first_name" : "Deepak",
+        "last_name" : "Yadav",
+        "email" : "dy@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "13",
+        "age" : "24"
+}
+{
+        "_id" : ObjectId("619e672b779b7e102659d57a"),
+        "first_name" : "Vijay",
+        "last_name" : "Kadyan",
+        "email" : "vk@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "14",
+        "age" : "24"
+}
+{
+        "_id" : ObjectId("619e673a779b7e102659d57b"),
+        "first_name" : "Deepak",
+        "last_name" : "Yadav",
+        "email" : "dy@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "13",
+        "age" : "24"
+}
+{
+        "_id" : ObjectId("619e673a779b7e102659d57c"),
+        "first_name" : "Vijay",
+        "last_name" : "Kadyan",
+        "email" : "vk@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "14",
+        "age" : "24"
+}
+{
+        "_id" : ObjectId("619e673c779b7e102659d57d"),
+        "first_name" : "Deepak",
+        "last_name" : "Yadav",
+        "email" : "dy@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "13",
+        "age" : "24"
+}
+{
+        "_id" : ObjectId("619e673c779b7e102659d57e"),
+        "first_name" : "Vijay",
+        "last_name" : "Kadyan",
+        "email" : "vk@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "14",
+        "age" : "24"
+}
+> db.users.findOne({"first_name":"Deepak"}).pretty()
+uncaught exception: TypeError: db.users.findOne(...).pretty is not a function :
+@(shell):1:1
+> db.users.findOne({"first_name":"Deepak"})
+{
+        "_id" : ObjectId("619e6678779b7e102659d576"),
+        "first_name" : "Deepak",
+        "last_name" : "Yadav",
+        "email" : "dy@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "13",
+        "age" : "24"
+}
+> db.users.find({"first_name":"Deepak"}).pretty()
+{
+        "_id" : ObjectId("619e6678779b7e102659d576"),
+        "first_name" : "Deepak",
+        "last_name" : "Yadav",
+        "email" : "dy@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "13",
+        "age" : "24"
+}
+{
+        "_id" : ObjectId("619e6723779b7e102659d577"),
+        "first_name" : "Deepak",
+        "last_name" : "Yadav",
+        "email" : "dy@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "13",
+        "age" : "24"
+}
+{
+        "_id" : ObjectId("619e672b779b7e102659d579"),
+        "first_name" : "Deepak",
+        "last_name" : "Yadav",
+        "email" : "dy@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "13",
+        "age" : "24"
+}
+{
+        "_id" : ObjectId("619e673a779b7e102659d57b"),
+        "first_name" : "Deepak",
+        "last_name" : "Yadav",
+        "email" : "dy@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "13",
+        "age" : "24"
+}
+{
+        "_id" : ObjectId("619e673c779b7e102659d57d"),
+        "first_name" : "Deepak",
+        "last_name" : "Yadav",
+        "email" : "dy@gmail.com",
+        "gender" : "Male",
+        "ip_address" : "13",
+        "age" : "24"
+}
+> db.users.update({"first_name":"Deepak"},{$set:{"last_name":"yad"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.users.updateMany({"first_name":"Vijay"},{$set:{"last_name":"kad"}})
+{ "acknowledged" : true, "matchedCount" : 4, "modifiedCount" : 4 }
+> db.users.remove({"first_name":"Aashish"},1)
+WriteResult({ "nRemoved" : 1 })
+> db.users.remove({"first_name":"Deepak"},2)
+WriteResult({ "nRemoved" : 1 })
+> db.users.remove({"first_name":"Vijay"})
+WriteResult({ "nRemoved" : 4 })
