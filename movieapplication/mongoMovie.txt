@@ -1,0 +1,2026 @@
+> show dbs
+Movie       0.000GB
+admin       0.000GB
+assignment  0.000GB
+config      0.000GB
+local       0.000GB
+> use Movie
+switched to db Movie
+> db.users.find({}).pretty()
+{
+        "_id" : ObjectId("61a1e133f77c164560944645"),
+        "id" : 1,
+        "movie_name" : "Teenage Dirtbag",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 15366
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944646"),
+        "id" : 2,
+        "movie_name" : "Saving Private Ryan",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 1993,
+        "budget" : 13893
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944647"),
+        "id" : 3,
+        "movie_name" : "Game of Their Lives, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 9069
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944648"),
+        "id" : 4,
+        "movie_name" : "Source, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 9045
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944649"),
+        "id" : 5,
+        "movie_name" : "Land That Time Forgot, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1994,
+        "budget" : 19823
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464a"),
+        "id" : 6,
+        "movie_name" : "Dog Day (Canicule)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2016,
+        "budget" : 16852
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464b"),
+        "id" : 7,
+        "movie_name" : "Cimarron Kid, The",
+        "movie_genre" : "Western",
+        "production_year" : 1997,
+        "budget" : 17893
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464c"),
+        "id" : 8,
+        "movie_name" : "Contract Killers",
+        "movie_genre" : "Action|Adventure|Thriller",
+        "production_year" : 2016,
+        "budget" : 12966
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464d"),
+        "id" : 9,
+        "movie_name" : "Grace of Monaco",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 15614
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464e"),
+        "id" : 10,
+        "movie_name" : "61*",
+        "movie_genre" : "Drama",
+        "production_year" : 2003,
+        "budget" : 16532
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464f"),
+        "id" : 11,
+        "movie_name" : "Flash Gordon",
+        "movie_genre" : "Action|Adventure|Sci-Fi",
+        "production_year" : 1998,
+        "budget" : 17350
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944650"),
+        "id" : 12,
+        "movie_name" : "Soccer Days",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 18383
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944651"),
+        "id" : 13,
+        "movie_name" : "Eaux d'artifice",
+        "movie_genre" : "Fantasy",
+        "production_year" : 2004,
+        "budget" : 12868
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944652"),
+        "id" : 14,
+        "movie_name" : "Stakeout on Dope Street",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2015,
+        "budget" : 11802
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944653"),
+        "id" : 15,
+        "movie_name" : "An Amazing Couple",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1998,
+        "budget" : 17791
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944654"),
+        "id" : 16,
+        "movie_name" : "Lake, A (Un lac)",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 14075
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944655"),
+        "id" : 17,
+        "movie_name" : "Cape Fear",
+        "movie_genre" : "Thriller",
+        "production_year" : 2000,
+        "budget" : 18371
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944656"),
+        "id" : 18,
+        "movie_name" : "Family Friend, The (L'amico di famiglia)",
+        "movie_genre" : "Drama",
+        "production_year" : 1999,
+        "budget" : 19875
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944657"),
+        "id" : 19,
+        "movie_name" : "Occupants, The",
+        "movie_genre" : "Thriller",
+        "production_year" : 2003,
+        "budget" : 18694
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944658"),
+        "id" : 20,
+        "movie_name" : "American Dreamz",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2011,
+        "budget" : 10892
+}
+Type "it" for more
+> db.users.find({"movie_name":{$eq: "American Dreamz"}}).pretty()
+{
+        "_id" : ObjectId("61a1e133f77c164560944658"),
+        "id" : 20,
+        "movie_name" : "American Dreamz",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2011,
+        "budget" : 10892
+}
+> db.users.find({"movie_name":{$ne: "American Dreamz"}}).pretty()
+{
+        "_id" : ObjectId("61a1e133f77c164560944645"),
+        "id" : 1,
+        "movie_name" : "Teenage Dirtbag",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 15366
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944646"),
+        "id" : 2,
+        "movie_name" : "Saving Private Ryan",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 1993,
+        "budget" : 13893
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944647"),
+        "id" : 3,
+        "movie_name" : "Game of Their Lives, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 9069
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944648"),
+        "id" : 4,
+        "movie_name" : "Source, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 9045
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944649"),
+        "id" : 5,
+        "movie_name" : "Land That Time Forgot, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1994,
+        "budget" : 19823
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464a"),
+        "id" : 6,
+        "movie_name" : "Dog Day (Canicule)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2016,
+        "budget" : 16852
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464b"),
+        "id" : 7,
+        "movie_name" : "Cimarron Kid, The",
+        "movie_genre" : "Western",
+        "production_year" : 1997,
+        "budget" : 17893
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464c"),
+        "id" : 8,
+        "movie_name" : "Contract Killers",
+        "movie_genre" : "Action|Adventure|Thriller",
+        "production_year" : 2016,
+        "budget" : 12966
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464d"),
+        "id" : 9,
+        "movie_name" : "Grace of Monaco",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 15614
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464e"),
+        "id" : 10,
+        "movie_name" : "61*",
+        "movie_genre" : "Drama",
+        "production_year" : 2003,
+        "budget" : 16532
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464f"),
+        "id" : 11,
+        "movie_name" : "Flash Gordon",
+        "movie_genre" : "Action|Adventure|Sci-Fi",
+        "production_year" : 1998,
+        "budget" : 17350
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944650"),
+        "id" : 12,
+        "movie_name" : "Soccer Days",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 18383
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944651"),
+        "id" : 13,
+        "movie_name" : "Eaux d'artifice",
+        "movie_genre" : "Fantasy",
+        "production_year" : 2004,
+        "budget" : 12868
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944652"),
+        "id" : 14,
+        "movie_name" : "Stakeout on Dope Street",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2015,
+        "budget" : 11802
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944653"),
+        "id" : 15,
+        "movie_name" : "An Amazing Couple",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1998,
+        "budget" : 17791
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944654"),
+        "id" : 16,
+        "movie_name" : "Lake, A (Un lac)",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 14075
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944655"),
+        "id" : 17,
+        "movie_name" : "Cape Fear",
+        "movie_genre" : "Thriller",
+        "production_year" : 2000,
+        "budget" : 18371
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944656"),
+        "id" : 18,
+        "movie_name" : "Family Friend, The (L'amico di famiglia)",
+        "movie_genre" : "Drama",
+        "production_year" : 1999,
+        "budget" : 19875
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944657"),
+        "id" : 19,
+        "movie_name" : "Occupants, The",
+        "movie_genre" : "Thriller",
+        "production_year" : 2003,
+        "budget" : 18694
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944659"),
+        "id" : 21,
+        "movie_name" : "Old Man Drinking a Glass of Beer",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2014,
+        "budget" : 10534
+}
+Type "it" for more
+> db.users.find({"budget":{$gt: 12000}}).pretty()
+{
+        "_id" : ObjectId("61a1e133f77c164560944645"),
+        "id" : 1,
+        "movie_name" : "Teenage Dirtbag",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 15366
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944646"),
+        "id" : 2,
+        "movie_name" : "Saving Private Ryan",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 1993,
+        "budget" : 13893
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944649"),
+        "id" : 5,
+        "movie_name" : "Land That Time Forgot, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1994,
+        "budget" : 19823
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464a"),
+        "id" : 6,
+        "movie_name" : "Dog Day (Canicule)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2016,
+        "budget" : 16852
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464b"),
+        "id" : 7,
+        "movie_name" : "Cimarron Kid, The",
+        "movie_genre" : "Western",
+        "production_year" : 1997,
+        "budget" : 17893
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464c"),
+        "id" : 8,
+        "movie_name" : "Contract Killers",
+        "movie_genre" : "Action|Adventure|Thriller",
+        "production_year" : 2016,
+        "budget" : 12966
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464d"),
+        "id" : 9,
+        "movie_name" : "Grace of Monaco",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 15614
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464e"),
+        "id" : 10,
+        "movie_name" : "61*",
+        "movie_genre" : "Drama",
+        "production_year" : 2003,
+        "budget" : 16532
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464f"),
+        "id" : 11,
+        "movie_name" : "Flash Gordon",
+        "movie_genre" : "Action|Adventure|Sci-Fi",
+        "production_year" : 1998,
+        "budget" : 17350
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944650"),
+        "id" : 12,
+        "movie_name" : "Soccer Days",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 18383
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944651"),
+        "id" : 13,
+        "movie_name" : "Eaux d'artifice",
+        "movie_genre" : "Fantasy",
+        "production_year" : 2004,
+        "budget" : 12868
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944653"),
+        "id" : 15,
+        "movie_name" : "An Amazing Couple",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1998,
+        "budget" : 17791
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944654"),
+        "id" : 16,
+        "movie_name" : "Lake, A (Un lac)",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 14075
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944655"),
+        "id" : 17,
+        "movie_name" : "Cape Fear",
+        "movie_genre" : "Thriller",
+        "production_year" : 2000,
+        "budget" : 18371
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944656"),
+        "id" : 18,
+        "movie_name" : "Family Friend, The (L'amico di famiglia)",
+        "movie_genre" : "Drama",
+        "production_year" : 1999,
+        "budget" : 19875
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944657"),
+        "id" : 19,
+        "movie_name" : "Occupants, The",
+        "movie_genre" : "Thriller",
+        "production_year" : 2003,
+        "budget" : 18694
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465a"),
+        "id" : 22,
+        "movie_name" : "Mulan",
+        "movie_genre" : "Action|Adventure|Drama|Romance",
+        "production_year" : 2017,
+        "budget" : 18890
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465b"),
+        "id" : 23,
+        "movie_name" : "Primus Hallucino-Genetics Live 2004",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2019,
+        "budget" : 12262
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465e"),
+        "id" : 26,
+        "movie_name" : "Con Air",
+        "movie_genre" : "Action|Adventure|Thriller",
+        "production_year" : 2004,
+        "budget" : 18911
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465f"),
+        "id" : 27,
+        "movie_name" : "Feeling Minnesota",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 13411
+}
+Type "it" for more
+> db.users.find({"budget":{$gte: 15000}}).pretty()
+{
+        "_id" : ObjectId("61a1e133f77c164560944645"),
+        "id" : 1,
+        "movie_name" : "Teenage Dirtbag",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 15366
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944649"),
+        "id" : 5,
+        "movie_name" : "Land That Time Forgot, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1994,
+        "budget" : 19823
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464a"),
+        "id" : 6,
+        "movie_name" : "Dog Day (Canicule)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2016,
+        "budget" : 16852
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464b"),
+        "id" : 7,
+        "movie_name" : "Cimarron Kid, The",
+        "movie_genre" : "Western",
+        "production_year" : 1997,
+        "budget" : 17893
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464d"),
+        "id" : 9,
+        "movie_name" : "Grace of Monaco",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 15614
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464e"),
+        "id" : 10,
+        "movie_name" : "61*",
+        "movie_genre" : "Drama",
+        "production_year" : 2003,
+        "budget" : 16532
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464f"),
+        "id" : 11,
+        "movie_name" : "Flash Gordon",
+        "movie_genre" : "Action|Adventure|Sci-Fi",
+        "production_year" : 1998,
+        "budget" : 17350
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944650"),
+        "id" : 12,
+        "movie_name" : "Soccer Days",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 18383
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944653"),
+        "id" : 15,
+        "movie_name" : "An Amazing Couple",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1998,
+        "budget" : 17791
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944655"),
+        "id" : 17,
+        "movie_name" : "Cape Fear",
+        "movie_genre" : "Thriller",
+        "production_year" : 2000,
+        "budget" : 18371
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944656"),
+        "id" : 18,
+        "movie_name" : "Family Friend, The (L'amico di famiglia)",
+        "movie_genre" : "Drama",
+        "production_year" : 1999,
+        "budget" : 19875
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944657"),
+        "id" : 19,
+        "movie_name" : "Occupants, The",
+        "movie_genre" : "Thriller",
+        "production_year" : 2003,
+        "budget" : 18694
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465a"),
+        "id" : 22,
+        "movie_name" : "Mulan",
+        "movie_genre" : "Action|Adventure|Drama|Romance",
+        "production_year" : 2017,
+        "budget" : 18890
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465e"),
+        "id" : 26,
+        "movie_name" : "Con Air",
+        "movie_genre" : "Action|Adventure|Thriller",
+        "production_year" : 2004,
+        "budget" : 18911
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944660"),
+        "id" : 28,
+        "movie_name" : "Dead Alive (Braindead)",
+        "movie_genre" : "Comedy|Fantasy|Horror",
+        "production_year" : 2011,
+        "budget" : 19224
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944661"),
+        "id" : 29,
+        "movie_name" : "Endless Love",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 17641
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944662"),
+        "id" : 30,
+        "movie_name" : "Outrage",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 2001,
+        "budget" : 18671
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944664"),
+        "id" : 32,
+        "movie_name" : "Square, The",
+        "movie_genre" : "Thriller",
+        "production_year" : 1991,
+        "budget" : 15515
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944665"),
+        "id" : 33,
+        "movie_name" : "The Referee",
+        "movie_genre" : "Comedy",
+        "production_year" : 2012,
+        "budget" : 15090
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944667"),
+        "id" : 35,
+        "movie_name" : "Year of the Yao, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 1996,
+        "budget" : 17017
+}
+Type "it" for more
+> db.users.find({"budget":{$lt: 10000}}).pretty()
+{
+        "_id" : ObjectId("61a1e133f77c164560944647"),
+        "id" : 3,
+        "movie_name" : "Game of Their Lives, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 9069
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944648"),
+        "id" : 4,
+        "movie_name" : "Source, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 9045
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465c"),
+        "id" : 24,
+        "movie_name" : "Lives of Others, The (Das leben der Anderen)",
+        "movie_genre" : "Drama|Romance|Thriller",
+        "production_year" : 2010,
+        "budget" : 9962
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094466b"),
+        "id" : 39,
+        "movie_name" : "Warriors of Virtue",
+        "movie_genre" : "Action|Adventure|Children|Fantasy",
+        "production_year" : 1993,
+        "budget" : 9231
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944674"),
+        "id" : 48,
+        "movie_name" : "End of the Affair, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 9784
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094467d"),
+        "id" : 57,
+        "movie_name" : "Curse of the Demon (Night of the Demon)",
+        "movie_genre" : "Fantasy|Horror|Mystery",
+        "production_year" : 2007,
+        "budget" : 9109
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944686"),
+        "id" : 66,
+        "movie_name" : "Masters of the Universe",
+        "movie_genre" : "Action|Adventure|Fantasy|Sci-Fi",
+        "production_year" : 1999,
+        "budget" : 9696
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446a5"),
+        "id" : 97,
+        "movie_name" : "Everything",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : 2013,
+        "budget" : 9029
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446b3"),
+        "id" : 111,
+        "movie_name" : "Good Man, A (Un buen hombre)",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2019,
+        "budget" : 9915
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446b6"),
+        "id" : 114,
+        "movie_name" : "Big Bad Mama II",
+        "movie_genre" : "Action|Comedy",
+        "production_year" : 2013,
+        "budget" : 9215
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446b7"),
+        "id" : 115,
+        "movie_name" : "Great Rock 'n' Roll Swindle, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2018,
+        "budget" : 9925
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446bd"),
+        "id" : 121,
+        "movie_name" : "Garden Lovers (Eedenistä pohjoiseen)",
+        "movie_genre" : "Documentary",
+        "production_year" : 2011,
+        "budget" : 9123
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446c3"),
+        "id" : 127,
+        "movie_name" : "Merlin's Apprentice",
+        "movie_genre" : "Adventure|Fantasy",
+        "production_year" : 2016,
+        "budget" : 9670
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446e4"),
+        "id" : 160,
+        "movie_name" : "Coup de grâce (Der Fangschuß)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 1993,
+        "budget" : 9624
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446e6"),
+        "id" : 162,
+        "movie_name" : "Angel",
+        "movie_genre" : "Drama",
+        "production_year" : 2012,
+        "budget" : 9088
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446f8"),
+        "id" : 180,
+        "movie_name" : "Law of the Lawless (Brigada)",
+        "movie_genre" : "Crime",
+        "production_year" : 2010,
+        "budget" : 9128
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446fa"),
+        "id" : 182,
+        "movie_name" : "Nothing Sacred",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2015,
+        "budget" : 9927
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944706"),
+        "id" : 194,
+        "movie_name" : "Home Alone: The Holiday Heist",
+        "movie_genre" : "Children|Comedy|Crime",
+        "production_year" : 2000,
+        "budget" : 9885
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094470f"),
+        "id" : 203,
+        "movie_name" : "Just Sex and Nothing Else (Csak szex és más semmi)",
+        "movie_genre" : "Comedy",
+        "production_year" : 1993,
+        "budget" : 9818
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944719"),
+        "id" : 213,
+        "movie_name" : "Rashomon (Rashômon)",
+        "movie_genre" : "Crime|Drama|Mystery",
+        "production_year" : 2000,
+        "budget" : 9477
+}
+Type "it" for more
+> db.users.find({"budget":{$lte: 10000}}).pretty()
+{
+        "_id" : ObjectId("61a1e133f77c164560944647"),
+        "id" : 3,
+        "movie_name" : "Game of Their Lives, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 9069
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944648"),
+        "id" : 4,
+        "movie_name" : "Source, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 9045
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465c"),
+        "id" : 24,
+        "movie_name" : "Lives of Others, The (Das leben der Anderen)",
+        "movie_genre" : "Drama|Romance|Thriller",
+        "production_year" : 2010,
+        "budget" : 9962
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094466b"),
+        "id" : 39,
+        "movie_name" : "Warriors of Virtue",
+        "movie_genre" : "Action|Adventure|Children|Fantasy",
+        "production_year" : 1993,
+        "budget" : 9231
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944674"),
+        "id" : 48,
+        "movie_name" : "End of the Affair, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 9784
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094467d"),
+        "id" : 57,
+        "movie_name" : "Curse of the Demon (Night of the Demon)",
+        "movie_genre" : "Fantasy|Horror|Mystery",
+        "production_year" : 2007,
+        "budget" : 9109
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944686"),
+        "id" : 66,
+        "movie_name" : "Masters of the Universe",
+        "movie_genre" : "Action|Adventure|Fantasy|Sci-Fi",
+        "production_year" : 1999,
+        "budget" : 9696
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446a5"),
+        "id" : 97,
+        "movie_name" : "Everything",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : 2013,
+        "budget" : 9029
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446b3"),
+        "id" : 111,
+        "movie_name" : "Good Man, A (Un buen hombre)",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2019,
+        "budget" : 9915
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446b6"),
+        "id" : 114,
+        "movie_name" : "Big Bad Mama II",
+        "movie_genre" : "Action|Comedy",
+        "production_year" : 2013,
+        "budget" : 9215
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446b7"),
+        "id" : 115,
+        "movie_name" : "Great Rock 'n' Roll Swindle, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2018,
+        "budget" : 9925
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446bd"),
+        "id" : 121,
+        "movie_name" : "Garden Lovers (Eedenistä pohjoiseen)",
+        "movie_genre" : "Documentary",
+        "production_year" : 2011,
+        "budget" : 9123
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446c3"),
+        "id" : 127,
+        "movie_name" : "Merlin's Apprentice",
+        "movie_genre" : "Adventure|Fantasy",
+        "production_year" : 2016,
+        "budget" : 9670
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446e4"),
+        "id" : 160,
+        "movie_name" : "Coup de grâce (Der Fangschuß)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 1993,
+        "budget" : 9624
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446e6"),
+        "id" : 162,
+        "movie_name" : "Angel",
+        "movie_genre" : "Drama",
+        "production_year" : 2012,
+        "budget" : 9088
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446f8"),
+        "id" : 180,
+        "movie_name" : "Law of the Lawless (Brigada)",
+        "movie_genre" : "Crime",
+        "production_year" : 2010,
+        "budget" : 9128
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446fa"),
+        "id" : 182,
+        "movie_name" : "Nothing Sacred",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2015,
+        "budget" : 9927
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944706"),
+        "id" : 194,
+        "movie_name" : "Home Alone: The Holiday Heist",
+        "movie_genre" : "Children|Comedy|Crime",
+        "production_year" : 2000,
+        "budget" : 9885
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094470f"),
+        "id" : 203,
+        "movie_name" : "Just Sex and Nothing Else (Csak szex és más semmi)",
+        "movie_genre" : "Comedy",
+        "production_year" : 1993,
+        "budget" : 9818
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944719"),
+        "id" : 213,
+        "movie_name" : "Rashomon (Rashômon)",
+        "movie_genre" : "Crime|Drama|Mystery",
+        "production_year" : 2000,
+        "budget" : 9477
+} db.users.find({"budget":{$gt: 12000}}).pretty()
+{ydb.users.find({"budget":{$gt: 10000}},{"production_year":{$gt :2000}}).pretty()
+        "_id" : ObjectId("61a1e133f77c164560944645"),year":{$gt :2000}}).pretty()
+        "id" : 1,
+        "movie_name" : "Teenage Dirtbag",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 15366
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944646"),
+        "id" : 2,
+        "movie_name" : "Saving Private Ryan",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 1993,
+        "budget" : 13893
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944649"),
+        "id" : 5,
+        "movie_name" : "Land That Time Forgot, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1994,
+        "budget" : 19823
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464a"),
+        "id" : 6,
+        "movie_name" : "Dog Day (Canicule)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2016,
+        "budget" : 16852
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464b"),
+        "id" : 7,
+        "movie_name" : "Cimarron Kid, The",
+        "movie_genre" : "Western",
+        "production_year" : 1997,
+        "budget" : 17893
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464c"),
+        "id" : 8,
+        "movie_name" : "Contract Killers",
+        "movie_genre" : "Action|Adventure|Thriller",
+        "production_year" : 2016,
+        "budget" : 12966
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464d"),
+        "id" : 9,
+        "movie_name" : "Grace of Monaco",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 15614
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464e"),
+        "id" : 10,
+        "movie_name" : "61*",
+        "movie_genre" : "Drama",
+        "production_year" : 2003,
+        "budget" : 16532
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464f"),
+        "id" : 11,
+        "movie_name" : "Flash Gordon",
+        "movie_genre" : "Action|Adventure|Sci-Fi",
+        "production_year" : 1998,
+        "budget" : 17350
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944650"),
+        "id" : 12,
+        "movie_name" : "Soccer Days",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 18383
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944651"),
+        "id" : 13,
+        "movie_name" : "Eaux d'artifice",
+        "movie_genre" : "Fantasy",
+        "production_year" : 2004,
+        "budget" : 12868
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944653"),
+        "id" : 15,
+        "movie_name" : "An Amazing Couple",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1998,
+        "budget" : 17791
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944654"),
+        "id" : 16,
+        "movie_name" : "Lake, A (Un lac)",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 14075
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944655"),
+        "id" : 17,
+        "movie_name" : "Cape Fear",
+        "movie_genre" : "Thriller",
+        "production_year" : 2000,
+        "budget" : 18371
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944656"),
+        "id" : 18,
+        "movie_name" : "Family Friend, The (L'amico di famiglia)",
+        "movie_genre" : "Drama",
+        "production_year" : 1999,
+        "budget" : 19875
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944657"),
+        "id" : 19,
+        "movie_name" : "Occupants, The",
+        "movie_genre" : "Thriller",
+        "production_year" : 2003,
+        "budget" : 18694
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465a"),
+        "id" : 22,
+        "movie_name" : "Mulan",
+        "movie_genre" : "Action|Adventure|Drama|Romance",
+        "production_year" : 2017,
+        "budget" : 18890
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465b"),
+        "id" : 23,
+        "movie_name" : "Primus Hallucino-Genetics Live 2004",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2019,
+        "budget" : 12262
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465e"),
+        "id" : 26,
+        "movie_name" : "Con Air",
+        "movie_genre" : "Action|Adventure|Thriller",
+        "production_year" : 2004,
+        "budget" : 18911
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465f"),
+        "id" : 27,
+        "movie_name" : "Feeling Minnesota",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 13411
+}
+Type "it" for more
+> db.users.find({"budget":{$lt: 10000}},{"production_year":{$gt: 2000}}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "Expression $gt takes exactly 2 arguments. 1 were passed in.",
+        "code" : 16020,
+        "codeName" : "Location16020"
+}
+> db.users.find({"budget":{$gt: 10000}},{"production_year":{$gt: 2000}}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "Expression $gt takes exactly 2 arguments. 1 were passed in.",
+        "code" : 16020,
+        "codeName" : "Location16020"
+}
+> db.users.find({"budget":{$gt: 10000}},{"production_year":{$gt: 2000}}).pdb.users.find({"budget":{$gt: 10000}},{"production_year":{$gt: 2000}}).pdb.users.find({"budget":{$gt: 10000}},{"producti
+> db.users.find({"budget":{$gt: 10000}},{"production_year":{$gt: 2000}}).pdb.users.find({"budget":{$gt: 10000}},{"production_year":{$gt: 2000}}).pdb.users.find({"budget":{$gt: 10000}},{"production_year":{$gt: 2000}}).pdb.users.find({"budget":{$gt: 10000}},{"production_year":{$gt: 2000}}).pdb.users.find({"budget":{$gt: 10000}},{"production_year":{$gt: 2000}}).prett
+> db.users.find({$and: [{"budget": {$gt: 10000}},{"production_year": {$gt: 2000}}]}).pretty()
+{
+        "_id" : ObjectId("61a1e133f77c164560944645"),
+        "id" : 1,
+        "movie_name" : "Teenage Dirtbag",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 15366
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464a"),
+        "id" : 6,
+        "movie_name" : "Dog Day (Canicule)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2016,
+        "budget" : 16852
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464c"),
+        "id" : 8,
+        "movie_name" : "Contract Killers",
+        "movie_genre" : "Action|Adventure|Thriller",
+        "production_year" : 2016,
+        "budget" : 12966
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464d"),
+        "id" : 9,
+        "movie_name" : "Grace of Monaco",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 15614
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464e"),
+        "id" : 10,
+        "movie_name" : "61*",
+        "movie_genre" : "Drama",
+        "production_year" : 2003,
+        "budget" : 16532
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944650"),
+        "id" : 12,
+        "movie_name" : "Soccer Days",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 18383
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944651"),
+        "id" : 13,
+        "movie_name" : "Eaux d'artifice",
+        "movie_genre" : "Fantasy",
+        "production_year" : 2004,
+        "budget" : 12868
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944652"),
+        "id" : 14,
+        "movie_name" : "Stakeout on Dope Street",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2015,
+        "budget" : 11802
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944657"),
+        "id" : 19,
+        "movie_name" : "Occupants, The",
+        "movie_genre" : "Thriller",
+        "production_year" : 2003,
+        "budget" : 18694
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944658"),
+        "id" : 20,
+        "movie_name" : "American Dreamz",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2011,
+        "budget" : 10892
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944659"),
+        "id" : 21,
+        "movie_name" : "Old Man Drinking a Glass of Beer",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2014,
+        "budget" : 10534
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465a"),
+        "id" : 22,
+        "movie_name" : "Mulan",
+        "movie_genre" : "Action|Adventure|Drama|Romance",
+        "production_year" : 2017,
+        "budget" : 18890
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465b"),
+        "id" : 23,
+        "movie_name" : "Primus Hallucino-Genetics Live 2004",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2019,
+        "budget" : 12262
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465d"),
+        "id" : 25,
+        "movie_name" : "Debt, The",
+        "movie_genre" : "Thriller",
+        "production_year" : 2012,
+        "budget" : 10633
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465e"),
+        "id" : 26,
+        "movie_name" : "Con Air",
+        "movie_genre" : "Action|Adventure|Thriller",
+        "production_year" : 2004,
+        "budget" : 18911
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465f"),
+        "id" : 27,
+        "movie_name" : "Feeling Minnesota",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 13411
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944660"),
+        "id" : 28,
+        "movie_name" : "Dead Alive (Braindead)",
+        "movie_genre" : "Comedy|Fantasy|Horror",
+        "production_year" : 2011,
+        "budget" : 19224
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944661"),
+        "id" : 29,
+        "movie_name" : "Endless Love",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 17641
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944662"),
+        "id" : 30,
+        "movie_name" : "Outrage",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 2001,
+        "budget" : 18671
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944663"),
+        "id" : 31,
+        "movie_name" : "MatchMaker, The",
+
+> db.users.find({$and: [{"budget": {$gt: 10000}},{"production_year": {$gt: 2000}}]}).pretty()
+> db.users.find({$and: [{"budget": {$gt: 10000}},{"production_year": {$gt: 2000}}]}).pretty()
+> db.users.find({$and: [{"budget": {$gt: 10000}},{"production_year": {$gt: 2000}}]}).pretty()
+> db.users.find({$and: [{"budget": {$gt: 10000}},{"production_year": {$gt: 2000}}]}).pretty()
+> db.users.find({$and: [{"budget": {$gt: 10000}},{"production_year": {$gt: 2000}}]}).pretty()
+> db.users.find({$or:  [{"budget": {$gt: 10000}},{"production_year": {$gt: 2000}}]}).pretty()
+{
+        "_id" : ObjectId("61a1e133f77c164560944645"),
+        "id" : 1,
+        "movie_name" : "Teenage Dirtbag",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 15366
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944646"),
+        "id" : 2,
+        "movie_name" : "Saving Private Ryan",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 1993,
+        "budget" : 13893
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944649"),
+        "id" : 5,
+        "movie_name" : "Land That Time Forgot, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1994,
+        "budget" : 19823
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464a"),
+        "id" : 6,
+        "movie_name" : "Dog Day (Canicule)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2016,
+        "budget" : 16852
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464b"),
+        "id" : 7,
+        "movie_name" : "Cimarron Kid, The",
+        "movie_genre" : "Western",
+        "production_year" : 1997,
+        "budget" : 17893
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464c"),
+        "id" : 8,
+        "movie_name" : "Contract Killers",
+        "movie_genre" : "Action|Adventure|Thriller",
+        "production_year" : 2016,
+        "budget" : 12966
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464d"),
+        "id" : 9,
+        "movie_name" : "Grace of Monaco",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2002,
+        "budget" : 15614
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464e"),
+        "id" : 10,
+        "movie_name" : "61*",
+        "movie_genre" : "Drama",
+        "production_year" : 2003,
+        "budget" : 16532
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464f"),
+        "id" : 11,
+        "movie_name" : "Flash Gordon",
+        "movie_genre" : "Action|Adventure|Sci-Fi",
+        "production_year" : 1998,
+        "budget" : 17350
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944650"),
+        "id" : 12,
+        "movie_name" : "Soccer Days",
+        "movie_genre" : "Comedy",
+        "production_year" : 2005,
+        "budget" : 18383
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944651"),
+        "id" : 13,
+        "movie_name" : "Eaux d'artifice",
+        "movie_genre" : "Fantasy",
+        "production_year" : 2004,
+        "budget" : 12868
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944652"),
+        "id" : 14,
+        "movie_name" : "Stakeout on Dope Street",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2015,
+        "budget" : 11802
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944653"),
+        "id" : 15,
+        "movie_name" : "An Amazing Couple",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1998,
+        "budget" : 17791
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944654"),
+        "id" : 16,
+        "movie_name" : "Lake, A (Un lac)",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 14075
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944655"),
+        "id" : 17,
+        "movie_name" : "Cape Fear",
+        "movie_genre" : "Thriller",
+        "production_year" : 2000,
+        "budget" : 18371
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944656"),
+        "id" : 18,
+        "movie_name" : "Family Friend, The (L'amico di famiglia)",
+        "movie_genre" : "Drama",
+        "production_year" : 1999,
+        "budget" : 19875
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944657"),
+        "id" : 19,
+        "movie_name" : "Occupants, The",
+        "movie_genre" : "Thriller",
+        "production_year" : 2003,
+        "budget" : 18694
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944658"),
+        "id" : 20,
+        "movie_name" : "American Dreamz",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2011,
+        "budget" : 10892
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944659"),
+        "id" : 21,
+        "movie_name" : "Old Man Drinking a Glass of Beer",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2014,
+        "budget" : 10534
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465a"),
+        "id" : 22,
+        "movie_name" : "Mulan",
+        "movie_genre" : "Action|Adventure|Drama|Romance",
+        "production_year" : 2017,
+        "budget" : 18890
+}
+Type "it" for more
+> db.users.find({$nor:  [{"budget": {$gt: 10000}},{"production_year": {$gt: 2000}}]}).pretty()
+{
+        "_id" : ObjectId("61a1e133f77c164560944647"),
+        "id" : 3,
+        "movie_name" : "Game of Their Lives, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 9069
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944648"),
+        "id" : 4,
+        "movie_name" : "Source, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 9045
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094466b"),
+        "id" : 39,
+        "movie_name" : "Warriors of Virtue",
+        "movie_genre" : "Action|Adventure|Children|Fantasy",
+        "production_year" : 1993,
+        "budget" : 9231
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944686"),
+        "id" : 66,
+        "movie_name" : "Masters of the Universe",
+        "movie_genre" : "Action|Adventure|Fantasy|Sci-Fi",
+        "production_year" : 1999,
+        "budget" : 9696
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446e4"),
+        "id" : 160,
+        "movie_name" : "Coup de grâce (Der Fangschuß)",
+        "movie_genre" : "Drama|War",
+        "production_year" : 1993,
+        "budget" : 9624
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944706"),
+        "id" : 194,
+        "movie_name" : "Home Alone: The Holiday Heist",
+        "movie_genre" : "Children|Comedy|Crime",
+        "production_year" : 2000,
+        "budget" : 9885
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094470f"),
+        "id" : 203,
+        "movie_name" : "Just Sex and Nothing Else (Csak szex és más semmi)",
+        "movie_genre" : "Comedy",
+        "production_year" : 1993,
+        "budget" : 9818
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944719"),
+        "id" : 213,
+        "movie_name" : "Rashomon (Rashômon)",
+        "movie_genre" : "Crime|Drama|Mystery",
+        "production_year" : 2000,
+        "budget" : 9477
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094476f"),
+        "id" : 299,
+        "movie_name" : "Peach Thief, The (Kradetzat na praskovi)",
+        "movie_genre" : "Drama|Romance|War",
+        "production_year" : 1998,
+        "budget" : 9029
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944780"),
+        "id" : 316,
+        "movie_name" : "Nutty Professor II: The Klumps",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 9097
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094482b"),
+        "id" : 487,
+        "movie_name" : "Charm's Incidents (Charms Zwischenfälle)",
+        "movie_genre" : "Drama",
+        "production_year" : 1992,
+        "budget" : 9467
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094482d"),
+        "id" : 489,
+        "movie_name" : "San Pietro",
+        "movie_genre" : "Documentary|War",
+        "production_year" : 1992,
+        "budget" : 9176
+}
+> db.users.find({$or:  [{"budget": {$lt: 10000}},{"production_year": {$lt: 2000}}]}).pretty()
+{
+        "_id" : ObjectId("61a1e133f77c164560944646"),
+        "id" : 2,
+        "movie_name" : "Saving Private Ryan",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 1993,
+        "budget" : 13893
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944647"),
+        "id" : 3,
+        "movie_name" : "Game of Their Lives, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 9069
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944648"),
+        "id" : 4,
+        "movie_name" : "Source, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 9045
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944649"),
+        "id" : 5,
+        "movie_name" : "Land That Time Forgot, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1994,
+        "budget" : 19823
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464b"),
+        "id" : 7,
+        "movie_name" : "Cimarron Kid, The",
+        "movie_genre" : "Western",
+        "production_year" : 1997,
+        "budget" : 17893
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094464f"),
+        "id" : 11,
+        "movie_name" : "Flash Gordon",
+        "movie_genre" : "Action|Adventure|Sci-Fi",
+        "production_year" : 1998,
+        "budget" : 17350
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944653"),
+        "id" : 15,
+        "movie_name" : "An Amazing Couple",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1998,
+        "budget" : 17791
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944654"),
+        "id" : 16,
+        "movie_name" : "Lake, A (Un lac)",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 14075
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944656"),
+        "id" : 18,
+        "movie_name" : "Family Friend, The (L'amico di famiglia)",
+        "movie_genre" : "Drama",
+        "production_year" : 1999,
+        "budget" : 19875
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465c"),
+        "id" : 24,
+        "movie_name" : "Lives of Others, The (Das leben der Anderen)",
+        "movie_genre" : "Drama|Romance|Thriller",
+        "production_year" : 2010,
+        "budget" : 9962
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944664"),
+        "id" : 32,
+        "movie_name" : "Square, The",
+        "movie_genre" : "Thriller",
+        "production_year" : 1991,
+        "budget" : 15515
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944667"),
+        "id" : 35,
+        "movie_name" : "Year of the Yao, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 1996,
+        "budget" : 17017
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094466a"),
+        "id" : 38,
+        "movie_name" : "Susan Lenox (Her Fall and Rise)",
+        "movie_genre" : "Adventure|Drama|Romance",
+        "production_year" : 1997,
+        "budget" : 12522
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094466b"),
+        "id" : 39,
+        "movie_name" : "Warriors of Virtue",
+        "movie_genre" : "Action|Adventure|Children|Fantasy",
+        "production_year" : 1993,
+        "budget" : 9231
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094466d"),
+        "id" : 41,
+        "movie_name" : "Meet the Applegates",
+        "movie_genre" : "Comedy",
+        "production_year" : 1999,
+        "budget" : 12849
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944671"),
+        "id" : 45,
+        "movie_name" : "On Guard (Bossu, Le)",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 1997,
+        "budget" : 19472
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944674"),
+        "id" : 48,
+        "movie_name" : "End of the Affair, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2006,
+        "budget" : 9784
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944676"),
+        "id" : 50,
+        "movie_name" : "The Sea Vultures",
+        "movie_genre" : "Drama",
+        "production_year" : 1996,
+        "budget" : 19982
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094467a"),
+        "id" : 54,
+        "movie_name" : "Shooting Gallery",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 1996,
+        "budget" : 15992
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094467b"),
+        "id" : 55,
+        "movie_name" : "Aurora Borealis",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1990,
+        "budget" : 14133
+}
+Type "it" for more
+> db.users.find({}).sort({production_year: -1}).pretty()
+{
+        "_id" : ObjectId("61a1e133f77c164560944668"),
+        "id" : 36,
+        "movie_name" : "Marius",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 10167
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094466c"),
+        "id" : 40,
+        "movie_name" : "52 Tuesdays",
+        "movie_genre" : "Children|Drama",
+        "production_year" : 2020,
+        "budget" : 14576
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944692"),
+        "id" : 78,
+        "movie_name" : "Destination Tokyo",
+        "movie_genre" : "Adventure|War",
+        "production_year" : 2020,
+        "budget" : 11786
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446af"),
+        "id" : 107,
+        "movie_name" : "At Close Range",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2020,
+        "budget" : 12790
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446e5"),
+        "id" : 161,
+        "movie_name" : "Westward Ho",
+        "movie_genre" : "Drama|Western",
+        "production_year" : 2020,
+        "budget" : 10419
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094470e"),
+        "id" : 202,
+        "movie_name" : "Rocker, The",
+        "movie_genre" : "Comedy",
+        "production_year" : 2020,
+        "budget" : 19911
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944710"),
+        "id" : 204,
+        "movie_name" : "Background to Danger",
+        "movie_genre" : "Drama|Thriller|War",
+        "production_year" : 2020,
+        "budget" : 16899
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094473c"),
+        "id" : 248,
+        "movie_name" : "Source, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2020,
+        "budget" : 9901
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094476b"),
+        "id" : 295,
+        "movie_name" : "Night and the City",
+        "movie_genre" : "Film-Noir|Thriller",
+        "production_year" : 2020,
+        "budget" : 12743
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944775"),
+        "id" : 305,
+        "movie_name" : "Not Without My Daughter",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 12932
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094478a"),
+        "id" : 326,
+        "movie_name" : "Tokyo Twilight (Tôkyô boshoku)",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 13881
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094478f"),
+        "id" : 331,
+        "movie_name" : "I Wanna Hold Your Hand",
+        "movie_genre" : "Comedy",
+        "production_year" : 2020,
+        "budget" : 9626
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944793"),
+        "id" : 335,
+        "movie_name" : "Business as Usual",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 13884
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609447b0"),
+        "id" : 364,
+        "movie_name" : "Bad Day at Black Rock",
+        "movie_genre" : "Drama|Thriller|Western",
+        "production_year" : 2020,
+        "budget" : 9225
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609447d1"),
+        "id" : 397,
+        "movie_name" : "Nude for Satan (Nuda per Satana)",
+        "movie_genre" : "Horror",
+        "production_year" : 2020,
+        "budget" : 13603
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944810"),
+        "id" : 460,
+        "movie_name" : "Three Monkeys (Üç maymun)",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 18949
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094481a"),
+        "id" : 470,
+        "movie_name" : "Made in America",
+        "movie_genre" : "Comedy",
+        "production_year" : 2020,
+        "budget" : 17601
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944837"),
+        "id" : 499,
+        "movie_name" : "Monkeybone",
+        "movie_genre" : "Animation|Comedy|Fantasy",
+        "production_year" : 2020,
+        "budget" : 18804
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094465b"),
+        "id" : 23,
+        "movie_name" : "Primus Hallucino-Genetics Live 2004",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2019,
+        "budget" : 12262
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944680"),
+        "id" : 60,
+        "movie_name" : "Sergeant York",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2019,
+        "budget" : 19142
+}
+Type "it" for more
+> db.users.find({}).sort({production_year: -1}).limit(10).pretty()
+{
+        "_id" : ObjectId("61a1e133f77c16456094470e"),
+        "id" : 202,
+        "movie_name" : "Rocker, The",
+        "movie_genre" : "Comedy",
+        "production_year" : 2020,
+        "budget" : 19911
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446e5"),
+        "id" : 161,
+        "movie_name" : "Westward Ho",
+        "movie_genre" : "Drama|Western",
+        "production_year" : 2020,
+        "budget" : 10419
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094473c"),
+        "id" : 248,
+        "movie_name" : "Source, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2020,
+        "budget" : 9901
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944668"),
+        "id" : 36,
+        "movie_name" : "Marius",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 10167
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094466c"),
+        "id" : 40,
+        "movie_name" : "52 Tuesdays",
+        "movie_genre" : "Children|Drama",
+        "production_year" : 2020,
+        "budget" : 14576
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944710"),
+        "id" : 204,
+        "movie_name" : "Background to Danger",
+        "movie_genre" : "Drama|Thriller|War",
+        "production_year" : 2020,
+        "budget" : 16899
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944775"),
+        "id" : 305,
+        "movie_name" : "Not Without My Daughter",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 12932
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094476b"),
+        "id" : 295,
+        "movie_name" : "Night and the City",
+        "movie_genre" : "Film-Noir|Thriller",
+        "production_year" : 2020,
+        "budget" : 12743
+}
+{
+        "_id" : ObjectId("61a1e133f77c1645609446af"),
+        "id" : 107,
+        "movie_name" : "At Close Range",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2020,
+        "budget" : 12790
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944692"),
+        "id" : 78,
+        "movie_name" : "Destination Tokyo",
+        "movie_genre" : "Adventure|War",
+        "production_year" : 2020,
+        "budget" : 11786
+}
+> db.users.find({}).sort({production_year: -1}).limit(11-15).pretty()
+{
+        "_id" : ObjectId("61a1e133f77c1645609446af"),
+        "id" : 107,
+        "movie_name" : "At Close Range",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2020,
+        "budget" : 12790
+}
+{
+        "_id" : ObjectId("61a1e133f77c16456094466c"),
+        "id" : 40,
+        "movie_name" : "52 Tuesdays",
+        "movie_genre" : "Children|Drama",
+        "production_year" : 2020,
+        "budget" : 14576
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944692"),
+        "id" : 78,
+        "movie_name" : "Destination Tokyo",
+        "movie_genre" : "Adventure|War",
+        "production_year" : 2020,
+        "budget" : 11786
+}
+{
+        "_id" : ObjectId("61a1e133f77c164560944668"),
+        "id" : 36,
+        "movie_name" : "Marius",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 10167
+}
+>
