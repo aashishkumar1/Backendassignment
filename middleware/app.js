@@ -24,10 +24,7 @@ app.patch('/user/:id',(req,res) => {
 
      var newData = req.body;
 
-     arr[0] = {
-         ...arr[0],
-         ...newData,
-     }
+     arr[0] = { ...arr[0],...newData}
      res.send(arr[0]);
  });
  app.delete('/user/:id',(req,res) =>{
