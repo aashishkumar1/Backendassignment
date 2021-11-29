@@ -86,13 +86,13 @@ app.get("/job/:rating", async (req,res) => {
 });
 app.get("/company", async (req,res) => {
 
-    const newData = await job.find().lean().exec();  //5th
+    const newData = await company.find().lean().exec();  //5th
     
     return res.send({newData});
 });
 app.get("/company/:num_jobs", async (req,res) => {
     let a = req.params.num_jobs;
-    const newData = await job.find().sort({a:-1}).lean().exec();  //6th
+    const newData = await company.find().sort({a:-1}).lean().exec();  //6th
     let arr = newData[0];
     return res.send(arr);
 });
