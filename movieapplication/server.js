@@ -11,7 +11,7 @@ const connect = () =>{
         useUnifiedTopology : true
     })
 }
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
     id : Number,
     movie_name : String,
     movie_genre : String,
