@@ -52,14 +52,17 @@ const evaluationtSchema = new mongoose.Schema({
     versionKey : false,
     timestamps : true
 });
-const Evaluation = mongoose.model("student",evaluationSchema);
+const Evaluation = mongoose.model("evaluation",evaluationtSchema);
 
 app.post('/',async (req,res) => {
     const user = await author.create(req.body);
 
     return res.status(201).send(user);
 });
-
+app.get('/evaluation/student/:topic_name',async (req,res)=>{
+    const user = await Student.find({topic_name : req.params.topic_name});
+    return res.status(201).send(user);
+});
 
 
 app.get('/highmarks',async (req,res) => {
