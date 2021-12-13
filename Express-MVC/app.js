@@ -54,8 +54,13 @@ const evaluationtSchema = new mongoose.Schema({
 });
 const Evaluation = mongoose.model("evaluation",evaluationtSchema);
 
-app.post('/',async (req,res) => {
-    const user = await author.create(req.body);
+app.post('/user',async (req,res) => {
+    const user = await User.create(req.body);
+
+    return res.status(201).send(user);
+});
+app.post('/student',async (req,res) => {
+    const user = await Student.create(req.body);
 
     return res.status(201).send(user);
 });
