@@ -3,14 +3,14 @@ const upload = require('../middleware/upload.js')
 const {User, Movie, Theatre, Screen, Show, Seat} = require('../models/user.model.js')
 const router = express.Router();
 
-router.post('/movies', upload.single("profile_photo_url") ,async (req,res) => {
+router.post('/movies', upload.single("poster_url") ,async (req,res) => {
     try {
-        const user = await User.create({
+        const user = await Movie.create({
             name : req.body.name,
-            email : req.body.email,
-            password : req.body.password,
-            profile_photo_url : req.file.path,
-            roles : req.body.roles,
+            actors : req.body.actors,
+            languages : req.body.languages,
+            directors : req.body.directors,
+            poster_url : req.file.path,
         });
         return res.status(201).json({user});
     } catch (e) {
